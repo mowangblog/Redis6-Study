@@ -1,0 +1,23 @@
+spring:
+  redis:
+    #redis地址
+    host: 192.168.64.128
+    #redis端口
+    port: 6379
+    #数据库索引
+    database: 0
+    #数据库连接超时
+    connect-timeout: 1800000
+    client-type: lettuce
+
+    lettuce:
+      pool:
+        #最大连接数，-1表示没有限制
+        max-active: 20
+        #最大阻塞等待时间，-1表示没有限制
+        max-wait: -1
+        #最大空闲连接
+        max-idle: 5
+        #最小空闲连接
+        min-idle: 0
+
