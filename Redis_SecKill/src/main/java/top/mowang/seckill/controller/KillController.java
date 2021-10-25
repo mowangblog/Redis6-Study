@@ -19,9 +19,9 @@ public class KillController {
     @Autowired
     KillServiceImpl killService;
     @PostMapping("/kill")
-    public String kill(Integer pid){
+    public String kill(String pid){
         int uid = new Random().nextInt(1000)+1000;
-        if (killService.SecKill(uid, pid)) {
+        if (killService.SecKill(uid+"", pid)) {
             return "success";
         }
         return "fail";
